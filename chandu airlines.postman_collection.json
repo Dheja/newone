@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "d0463168-f245-4a94-ba7b-f9b2aaa83b76",
+		"name": "chandu airlines",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/createFlight",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"airline\": \"INDIGO\",\n    \"depCity\": \"Hyderabad\",\n    \"arrCity\": \"Bangalore\",\n    \"arrDate\": \"22/04/2019\",\n    \"depDate\": \"22/04/2019\",\n    \"depTime\": \"11:30\",\n    \"arrTime\": \"12:30\",\n    \"firstSeats\": 100,\n    \"firstSeatsFare\": \"2500\",\n    \"businessSeats\": \"50\",\n    \"businessSeatsFare\": \"30000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/createFlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"createFlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/createFlight",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"airline\": \"AIRASIA\",\n    \"depCity\": \"Hyderabad\",\n    \"arrCity\": \"Chennai\",\n    \"arrDate\": \"22/04/2019\",\n    \"depDate\": \"22/04/2019\",\n    \"depTime\": \"12:30\",\n    \"arrTime\": \"13:30\",\n    \"firstSeats\": 100,\n    \"firstSeatsFare\": \"2500\",\n    \"businessSeats\": \"50\",\n    \"businessSeatsFare\": \"30000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/createFlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"createFlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/getAllFlights",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"airline\": \"INDIGO\",\n    \"depCity\": \"Hyderabad\",\n    \"arrCity\": \"Bangalore\",\n    \"arrDate\": \"22/04/2019\",\n    \"depDate\": \"22/04/2019\",\n    \"depTime\": \"11:30\",\n    \"arrTime\": \"12:30\",\n    \"firstSeats\": 100,\n    \"firstSeatsFare\": \"2500\",\n    \"businessSeats\": \"50\",\n    \"businessSeatsFare\": \"30000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/getAllFlights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"getAllFlights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/getFlightById/102",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"airline\": \"INDIGO\",\n    \"depCity\": \"Hyderabad\",\n    \"arrCity\": \"Bangalore\",\n    \"arrDate\": \"22/04/2019\",\n    \"depDate\": \"22/04/2019\",\n    \"depTime\": \"11:30\",\n    \"arrTime\": \"12:30\",\n    \"firstSeats\": 100,\n    \"firstSeatsFare\": \"2500\",\n    \"businessSeats\": \"50\",\n    \"businessSeatsFare\": \"30000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/getFlightById/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"getFlightById",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/flight/101/?depDate=25/04/2019&arrDate=25/04/2019&depTime=11:30&arrTime=12:30",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/flight/101/21-04-2020/22-04-2020/11:30/12:30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"flight",
+						"101",
+						"21-04-2020",
+						"22-04-2020",
+						"11:30",
+						"12:30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/flights/22-04-2019/Bangalore",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"custEmail\":\"chandu4321@gmail.com\",\n\t\"noOfPassengers\":\"2\",\n\t\"classType\":\"firstClass\",\n\t\" seatNumber\":12,\n\t\"creditCardInfo\":\"12345646\" ,\n\t\"flightId\":101\n\t}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/flight/bookFlight/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"flight",
+						"bookFlight",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/flight/bookFlight/100",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"flightId\":101,\t\n\t\"custEmail\":\"chandu4321@gmail.com\",\n\t\"noOfPassengers\":\"3\",\n\t\"classType\":\"firstClass\",\n\t\" seatNumber\":2,\n\t\"creditCardInfo\":\"12345646\" \n\t\n\t}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/bookings/50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"bookings",
+						"50"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
