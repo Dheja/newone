@@ -1,0 +1,113 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://tempuri.org/PurchaseOrderSchema.xsd"
+           targetNamespace="http://tempuri.org/PurchaseOrderSchema.xsd"
+           elementFormDefault="qualified">
+ <xsd:element name="PurchaseOrder" type="tns:PurchaseOrderType"/>
+ <xsd:complexType name="PurchaseOrderType">
+  <xsd:sequence>
+   <xsd:element name="ShipTo" type="tns:USAddress" maxOccurs="2"/>
+   <xsd:element name="BillTo" type="tns:USAddress"/>
+  </xsd:sequence>
+  <xsd:attribute name="OrderDate" type="xsd:date"/>
+ </xsd:complexType>
+
+ <xsd:complexType name="USAddress">
+  <xsd:sequence>
+   <xsd:element name="name"   type="xsd:string"/>
+   <xsd:element name="street" type="xsd:string"/>
+   <xsd:element name="city"   type="xsd:string"/>
+   <xsd:element name="state"  type="xsd:string"/>
+   <xsd:element name="zip"    type="xsd:integer"/>
+  </xsd:sequence>
+  <xsd:attribute name="country" type="xsd:NMTOKEN" fixed="US"/>
+ </xsd:complexType>
+</xsd:schema>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The <schema> element is the root of every XML Schema document. The <schema> element often includes attributes as shown below.
+This schema is located at C:\Projects\XML\Projects\XMLSpyProject\Schema\BasicExample.xsd -->
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+            targetNamespace="www.diranieh.com/basic" 
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="Book">
+        <xs:complexType>
+            <xs:sequence>
+            <    xs:element name="Author" type="xs:string"/>
+                <xs:element name="Title" type="xs:string"/>
+                <xs:element name="ISBN" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+
+
+https://www.guru99.com/java-reflection-api.html
+https://www.javatpoint.com/java-reflection
+https://www.journaldev.com/1789/java-reflection-example-tutorial
+https://www.baeldung.com/java-reflection
+https://dzone.com/articles/generating-json-schema-xsd
+
+
+
+
+http://websystique.com/java/jaxb/jaxb-codegeneration-maven-example/
+http://websystique.com/java/jaxb2-tutorial/
+https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming
+http://websystique.com/spring-boot/spring-boot-rest-api-example/
+https://stackoverflow.com/questions/520328/can-you-find-all-classes-in-a-package-using-reflection
+https://github.com/microsoft/XmlNotepad/blob/master/src/Samples/Employee.xsd
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1
+https://www.javaworld.com/article/2077015/take-an-in-depth-look-at-the-java-reflection-api.html
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dustin="http://marxsoftware.blogspot.com/foodxml"
+           targetNamespace="http://marxsoftware.blogspot.com/foodxml"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:element name="Food">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="Vegetable" type="dustin:Vegetable" />
+            <xs:element ref="dustin:Fruit" />
+            <xs:element name="Dessert" type="dustin:Dessert" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:simpleType name="Vegetable">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Carrot"/>
+         <xs:enumeration value="Squash"/>
+         <xs:enumeration value="Spinach"/>
+         <xs:enumeration value="Celery"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="Fruit">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Watermelon"/>
+            <xs:enumeration value="Apple"/>
+            <xs:enumeration value="Orange"/>
+            <xs:enumeration value="Grape"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:simpleType name="Dessert">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Pie"/>
+         <xs:enumeration value="Cake"/>
+         <xs:enumeration value="Ice Cream"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>
+
+
+
+
+<special>
+https://www.programcreek.com/java-api-examples/?code=andyphillips404/awplab-core/awplab-core-master/rest/swagger/src/main/java/com/awplab/core/rest/swagger/BaseSwaggerRestProvider.java#
