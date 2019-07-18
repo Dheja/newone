@@ -138,3 +138,8 @@ https://www.javaworld.com/article/2077015/take-an-in-depth-look-at-the-java-refl
 
 <special>
 https://www.programcreek.com/java-api-examples/?code=andyphillips404/awplab-core/awplab-core-master/rest/swagger/src/main/java/com/awplab/core/rest/swagger/BaseSwaggerRestProvider.java#
+https://stackoverflow.com/questions/40454237/writing-a-java-object-to-a-file-using-snakeyaml-list-of-inner-objects-are-not
+https://stackoverflow.com/questions/23679642/reading-values-from-a-property-file-into-a-mappropertyname-listofvalues/23680040#23680040
+https://stackoverflow.com/questions/30663430/json-to-yaml-conversion-does-not-work
+https://www.baeldung.com/jackson-yaml
+https://www.logicbig.com/tutorials/misc/yaml/java-to-yaml.html
