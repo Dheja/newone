@@ -1,0 +1,104 @@
+vi testkong.pem
+
+puttygen
+=========
+puttygen testkong.pem>>>testkong.ppk
+putty supports only .ppk 
+
+putty
+======
+ip=23241.23
+ssh=.ppk
+
+
+yes or no
+press yes..
+
+
+from linux ssh into remote server
+===================================
+ssh ubuntu@13.235.18.46 -i testkong.pemkong.pem
+
+if there is any file permission issues
+
+sudo chmod 600 testkong.pem
+
+password:chandu123
+
+
+
+
+
+
+
+
+
+sudo apt-get update
+
+kong process:
+==============
+kong prequisits
+---------------
+linux server
+postgresql or casandra database.
+
+
+download 18.04 kong package
+
+wget https://bintray.com/kong/kong-deb/download_file?file_path=kong-1.1.2.bionic.all.deb
+
+sudo dpkg -i download_file\?file_path\=kong-1.1.2.bionic.all.deb
+
+
+postgres
+=========
+sudo apt-get update
+
+sudo apt install postgresql postgresql-contrib
+
+switch to postgres user
+
+ sudo -i -u postgres
+CREATE USER kong; CREATE DATABASE kong OWNER kong;
+
+ALTER USER kong WITH PASSWORD 'kong';
+
+
+mv kong.conf.default kong.conf
+sudo vi kong.conf
+to save
+wq!
+
+migrate the kong with db
+ kong migrations bootstrap -c /etc/kong/kong.cong
+ kong
+ sudo kong start
+
+
+ curl -X GET http://localhost:8001
+
+http get http://localhost:8001
+
+
+
+
+kong service register
+
+ curl -i -X POST --url http://localhost:8001/services/ --data 'name=airlinesdemo' --data 'url=http://localhost:9000'
+
+
+curl -i -X POST --url http://localhost:8001/services/airlinesdemo/routes --data 'paths=/indigo'
+
+
+
+
+
+authentication
+===============
+curl -i -X POST --url http://localhost:8001/services/airlinesdemo/plugins/ --data 'name=key-auth'
+curl -i -X POST --url http://localhost:8001/consumers --data 'username=chandu'
+ curl -i -X POST --url http://localhost:8001/consumers/chandu/key-auth/ --data 'key=chandu123'
+ curl -i -X POST --url http://localhost:8001/consumers/chandu/key-auth/ --data 'key=chandu123'
+
+
+http get http://localhost:8000/indigo/get?apikey=chandu123
